@@ -1,8 +1,8 @@
-#include <ragdoll/core/kernel/Bone.h>
+#include <react3d/core/kernel/Bone.h>
 
 #include <cassert>
 
-#include <ragdoll/core/kernel/Skeleton.h>
+#include <react3d/core/kernel/Skeleton.h>
 
 ////////////////////////////////////////////////////////////////////////////////
 

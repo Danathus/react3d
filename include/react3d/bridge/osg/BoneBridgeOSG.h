@@ -5,8 +5,8 @@
 
 #include <osg/ref_ptr>
 
-#include <ragdoll/core/math/Vec.h>
-#include <ragdoll/LibraryExport.h>
+#include <react3d/core/math/Vec.h>
+#include <react3d/LibraryExport.h>
 
 // todo -- try to get rid of these includes...
 #include <osg/ShapeDrawable>

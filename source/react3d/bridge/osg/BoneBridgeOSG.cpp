@@ -1,12 +1,12 @@
-#include <ragdoll/bridge/osg/BoneBridgeOSG.h>
+#include <react3d/bridge/osg/BoneBridgeOSG.h>
 
 #include <osg/ShapeDrawable>
 #include <osg/Switch>
 #include <osg/Geode>
 
-#include <ragdoll/bridge/osg/Math.h>
-#include <ragdoll/core/kernel/Skeleton.h>
-#include <ragdoll/core/kernel/Bone.h>
+#include <react3d/bridge/osg/Math.h>
+#include <react3d/core/kernel/Skeleton.h>
+#include <react3d/core/kernel/Bone.h>
 
 ////////////////////////////////////////////////////////////////////////////////
 

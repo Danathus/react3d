@@ -5,9 +5,9 @@
 
 #include <vector>
 
-#include <ragdoll/LibraryExport.h>
+#include <react3d/LibraryExport.h>
 
-#include <ragdoll/core/math/Matrix.h>
+#include <react3d/core/math/Matrix.h>
 
 class Bone;
 
