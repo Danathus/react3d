@@ -1,8 +1,9 @@
 cmake_minimum_required(VERSION 2.6)
 
-PROJECT (Sharedcode)  #the project's name
+# the project's name
+project(react3d)
 
-FILE(TO_CMAKE_PATH "$ENV{DELTA_ROOT}" DELTA_ROOT_CMAKE)
+file(TO_CMAKE_PATH "$ENV{DELTA_ROOT}" DELTA_ROOT_CMAKE)
 
 # Set where to look for the Find*.cmake files
 SET(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/CMakeModules
@@ -36,36 +37,32 @@ SET(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/lib)
 MAKE_DIRECTORY(${EXECUTABLE_OUTPUT_PATH})
 MAKE_DIRECTORY(${LIBRARY_OUTPUT_PATH})
 
-# Add macro functions 
-INCLUDE(UtilityMacros)
+# Add macro functions
+#INCLUDE(UtilityMacros)
 
-SET(QT_USE_QTOPENGL "true")
-FIND_PACKAGE(Qt4) #for tool applicatmions
+#SET(QT_USE_QTOPENGL "true")
+#FIND_PACKAGE(Qt4) #for tool applicatmions
 
-FIND_PACKAGE(OSG         REQUIRED)
-FIND_PACKAGE(OpenThreads REQUIRED)
-FIND_PACKAGE(Cal3d       REQUIRED)
-FIND_PACKAGE(ODE         REQUIRED)
-FIND_PACKAGE(XercesC     REQUIRED)
-FIND_PACKAGE(CEGUI       REQUIRED)
-FIND_PACKAGE(RakNet      REQUIRED)
-FIND_PACKAGE(OpenAL      REQUIRED)
-FIND_PACKAGE(FFMPEG      REQUIRED)
-FIND_PACKAGE(OpenGL      REQUIRED)
+FIND_PACKAGE(OSG)
+#FIND_PACKAGE(OpenThreads REQUIRED)
+#FIND_PACKAGE(Cal3d       REQUIRED)
+#FIND_PACKAGE(ODE         REQUIRED)
+#FIND_PACKAGE(XercesC     REQUIRED)
+#FIND_PACKAGE(CEGUI       REQUIRED)
+#FIND_PACKAGE(RakNet      REQUIRED)
+#FIND_PACKAGE(OpenAL      REQUIRED)
+#FIND_PACKAGE(FFMPEG      REQUIRED)
+FIND_PACKAGE(OpenGL)
 
-FIND_PACKAGE(Delta3DLibs REQUIRED)
+#FIND_PACKAGE(Delta3DLibs REQUIRED)
 
-#New methods for finding the Delta3D libraries
-FIND_PACKAGE(dtActors    REQUIRED)
-FIND_PACKAGE(dtAudio     REQUIRED)
-FIND_PACKAGE(dtCore      REQUIRED)
-FIND_PACKAGE(dtDAL       REQUIRED)
-FIND_PACKAGE(dtGame      REQUIRED)
-FIND_PACKAGE(dtUtil      REQUIRED)
-
-
-
-#FIND_PACKAGE(PPU REQUIRED)
+# New methods for finding the Delta3D libraries
+#FIND_PACKAGE(dtActors    REQUIRED)
+#FIND_PACKAGE(dtAudio     REQUIRED)
+#FIND_PACKAGE(dtCore      REQUIRED)
+#FIND_PACKAGE(dtDAL       REQUIRED)
+#FIND_PACKAGE(dtGame      REQUIRED)
+#FIND_PACKAGE(dtUtil      REQUIRED)
 
 INCLUDE_DIRECTORIES(${DELTA3D_INCLUDE_DIR}
                     ${DELTA3D_EXT_DIR}/inc
@@ -86,27 +83,8 @@ ADD_CUSTOM_TARGET(UNINSTALL
 
 ################################################################################
 
-ADD_SUBDIRECTORY(${SOURCE_PATH}/SharedUtil)
-ADD_SUBDIRECTORY(${SOURCE_PATH}/ragdoll)
-ADD_SUBDIRECTORY(${SOURCE_PATH}/CommonAI)
-ADD_SUBDIRECTORY(${SOURCE_PATH}/ExperimentFramework)
-ADD_SUBDIRECTORY(${SOURCE_PATH}/SharedActors)
-ADD_SUBDIRECTORY(${SOURCE_PATH}/BoatActors)
-ADD_SUBDIRECTORY(${SOURCE_PATH}/Minimap)
-ADD_SUBDIRECTORY(${SOURCE_PATH}/SerializationFPA)
-ADD_SUBDIRECTORY(${SOURCE_PATH}/ShadowManager)
-ADD_SUBDIRECTORY(${SOURCE_PATH}/AudioComponent)
-ADD_SUBDIRECTORY(${SOURCE_PATH}/SharedHUD)
-ADD_SUBDIRECTORY(${SOURCE_PATH}/SharedNet)
-ADD_SUBDIRECTORY(${SOURCE_PATH}/Water)
-ADD_SUBDIRECTORY(${SOURCE_PATH}/GUIManager)
-ADD_SUBDIRECTORY(${SOURCE_PATH}/VOIP)
+ADD_SUBDIRECTORY(${SOURCE_PATH}/react3d)
 
-# applications
-ADD_SUBDIRECTORY(${CMAKE_SOURCE_DIR}/applications/SplineTool)
-ADD_SUBDIRECTORY(${CMAKE_SOURCE_DIR}/applications/RagdollTool)
-ADD_SUBDIRECTORY(${CMAKE_SOURCE_DIR}/applications/Unpackager)
-
+# applications - todo
 
 ################################################################################
-
