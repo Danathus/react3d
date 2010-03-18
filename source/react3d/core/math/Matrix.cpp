@@ -1,13 +1,7 @@
-#include <react3d/bridge/ode/JointBridgeODE.h>
-
-#include <stdio.h> // for NULL
+#include <react3d/core/math/Matrix.hpp>
 
 ////////////////////////////////////////////////////////////////////////////////
 
-JointBridgeODE::JointBridgeODE()
-   : mDataODE(NULL)
-{
-   // nada
-}
+template class Matrix4x4<float>;
 
 ////////////////////////////////////////////////////////////////////////////////

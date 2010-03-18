@@ -1,14 +1,14 @@
-#include <ragdoll/bridge/cal3d/BoneBridgeCAL3D.h>
+#include <react3d/bridge/cal3d/BoneBridgeCAL3D.h>
 
 #include <cal3d/bone.h>
 #include <cal3d/model.h>
 
-#include <ragdoll/core/math/Matrix.hpp>
-#include <ragdoll/core/math/BoundingBox.h>
-#include <ragdoll/core/kernel/Skeleton.h>
-#include <ragdoll/core/kernel/Bone.h>
+#include <react3d/core/math/Matrix.hpp>
+#include <react3d/core/math/BoundingBox.h>
+#include <react3d/core/kernel/Skeleton.h>
+#include <react3d/core/kernel/Bone.h>
 
-#include <ragdoll/bridge/cal3d/Math.h>
+#include <react3d/bridge/cal3d/Math.h>
 
 #define WRITE_CAL3D_BONE_TRANSLATION 1 // 1 is more correct, but 0 looks better ftm :P
 #define WRITE_CAL3D_BONE_ROTATION    1 // this one is fine

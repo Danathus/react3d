@@ -1,5 +1,5 @@
-#ifndef RAGDOLL_MATRIX__HPP
-#define RAGDOLL_MATRIX__HPP
+#ifndef REACT3D_MATRIX__HPP
+#define REACT3D_MATRIX__HPP
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -376,4 +376,4 @@ template <typename T> bool Matrix4x4<T>::Invert4x4()
 
 ////////////////////////////////////////////////////////////////////////////////
 
-#endif // RAGDOLL_MATRIX__HPP
+#endif // REACT3D_MATRIX__HPP

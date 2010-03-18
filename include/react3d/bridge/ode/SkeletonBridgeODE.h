@@ -1,18 +1,18 @@
-#ifndef RAGDOLL_BRIDGE_ODE_SKELETON__H
-#define RAGDOLL_BRIDGE_ODE_SKELETON__H
+#ifndef REACT3D_BRIDGE_ODE_SKELETON__H
+#define REACT3D_BRIDGE_ODE_SKELETON__H
 
 ////////////////////////////////////////////////////////////////////////////////
 
 #include <vector>
 
-#include <ragdoll/LibraryExport.h>
+#include <react3d/bridge/ode/LibraryExport.h>
 
 typedef struct dxJointGroup* dJointGroupID;
 typedef struct dxJoint*      dJointID;
 
 ////////////////////////////////////////////////////////////////////////////////
 
-class RAGDOLL_LIBRARY_EXPORT SkeletonBridgeODE
+class REACT3D_BRIDGE_ODE_LIBRARY_EXPORT SkeletonBridgeODE
 {
 public:
    SkeletonBridgeODE();
@@ -28,4 +28,4 @@ private:
 
 ////////////////////////////////////////////////////////////////////////////////
 
-#endif //RAGDOLL_BRIDGE_ODE_SKELETON__H
+#endif // REACT3D_BRIDGE_ODE_SKELETON__H

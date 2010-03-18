@@ -1,10 +1,10 @@
-#ifndef RAGDOLL_BRIDGE_CAL3D_MATH__H
-#define RAGDOLL_BRIDGE_CAL3D_MATH__H
+#ifndef REACT3D_BRIDGE_CAL3D_MATH__H
+#define REACT3D_BRIDGE_CAL3D_MATH__H
 
 ////////////////////////////////////////////////////////////////////////////////
 
 #include <cal3d/quaternion.h>
-#include <ragdoll/core/math/Vec.h>
+#include <react3d/core/math/Vec.h>
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -41,4 +41,4 @@ inline CalQuaternion ConvertKerneltoCAL3D(const Quaternionf& kernelQuat)
 
 ////////////////////////////////////////////////////////////////////////////////
 
-#endif // RAGDOLL_BRIDGE_CAL3D_MATH__H
+#endif // REACT3D_BRIDGE_CAL3D_MATH__H

@@ -1,9 +1,9 @@
-#ifndef RAGDOLL_BONE__H
-#define RAGDOLL_BONE__H
+#ifndef REACT3D_BONE__H
+#define REACT3D_BONE__H
 
 ////////////////////////////////////////////////////////////////////////////////
 
-#include <react3d/LibraryExport.h>
+#include <react3d/core/LibraryExport.h>
 
 #include <react3d/core/math/Matrix.h>
 
@@ -11,7 +11,7 @@ class Skeleton;
 
 ////////////////////////////////////////////////////////////////////////////////
 
-class RAGDOLL_LIBRARY_EXPORT Bone
+class REACT3D_CORE_LIBRARY_EXPORT Bone
 {
 public:
    Bone(Skeleton& skeleton, bool hackFlip180);
@@ -81,4 +81,4 @@ private:
 
 ////////////////////////////////////////////////////////////////////////////////
 
-#endif // RAGDOLL_BONE__H
+#endif // REACT3D_BONE__H

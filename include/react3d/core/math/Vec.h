@@ -1,11 +1,11 @@
-#ifndef RAGDOLL_VEC__H
-#define RAGDOLL_VEC__H
+#ifndef REACT3D_VEC__H
+#define REACT3D_VEC__H
 
 ////////////////////////////////////////////////////////////////////////////////
 
 #include <math.h>
 
-#include <react3d/LibraryExport.h>
+#include <react3d/core/LibraryExport.h>
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -34,7 +34,7 @@ enum
 	V
 };
 
-template <unsigned int N, typename T> class RAGDOLL_LIBRARY_EXPORT Vec
+template <unsigned int N, typename T> class /*REACT3D_CORE_LIBRARY_EXPORT*/ Vec
 {
 public:
 	Vec() {}
@@ -183,7 +183,7 @@ template <unsigned int N, typename T> inline Vec<N, T> operator*(const T &t, con
 
 ////////////////////////////////////////////////////////////////////////////////
 
-template <typename T> class RAGDOLL_LIBRARY_EXPORT Vec2 : public Vec<2, T>
+template <typename T> class /*REACT3D_CORE_LIBRARY_EXPORT*/ Vec2 : public Vec<2, T>
 {
 public:
 	Vec2() {}
@@ -211,7 +211,7 @@ public:
 
 ////////////////////////////////////////////////////////////////////////////////
 
-template <typename T> class RAGDOLL_LIBRARY_EXPORT Vec3 : public Vec<3, T>
+template <typename T> class /*REACT3D_CORE_LIBRARY_EXPORT*/ Vec3 : public Vec<3, T>
 {
 public:
 	Vec3() {}
@@ -270,7 +270,7 @@ public:
 
 ////////////////////////////////////////////////////////////////////////////////
 
-template <typename T> class RAGDOLL_LIBRARY_EXPORT Vec4 : public Vec<4, T>
+template <typename T> class /*REACT3D_CORE_LIBRARY_EXPORT*/ Vec4 : public Vec<4, T>
 {
 public:
 	Vec4() {}
@@ -329,4 +329,4 @@ typedef Vec4f Quaternionf;
 
 ////////////////////////////////////////////////////////////////////////////////
 
-#endif // RAGDOLL_VEC__H
+#endif // REACT3D_VEC__H

@@ -3,12 +3,26 @@ cmake_minimum_required(VERSION 2.6)
 # the project's name
 project(react3d)
 
-file(TO_CMAKE_PATH "$ENV{DELTA_ROOT}" DELTA_ROOT_CMAKE)
-
 # Set where to look for the Find*.cmake files
 SET(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/CMakeModules
-                      ${DELTA_ROOT_CMAKE}/CMakeModules
                       ${CMAKE_MODULE_PATH})
+
+################################################################################
+# Build Options
+
+# see cmake --help-policy CMP0003 for more information
+IF(COMMAND cmake_policy)
+   CMAKE_POLICY(SET CMP0003 NEW)
+ENDIF(COMMAND cmake_policy)
+
+OPTION(DYNAMIC_LINK "Enable to build dynamic libraries; disable to build static libraries" ON)
+
+if (DYNAMIC_LINK)
+  set(USE_DYNAMIC_LINK "YES")
+  set(LIBMODE SHARED)
+else (DYNAMIC_LINK)
+  set(USE_STATIC_LINK "YES")
+endif (DYNAMIC_LINK)
 
 ################################################################################
 # Visual studio specific
@@ -43,14 +57,14 @@ MAKE_DIRECTORY(${LIBRARY_OUTPUT_PATH})
 #SET(QT_USE_QTOPENGL "true")
 #FIND_PACKAGE(Qt4) #for tool applicatmions
 
-FIND_PACKAGE(OSG)
-#FIND_PACKAGE(OpenThreads REQUIRED)
-#FIND_PACKAGE(Cal3d)
-#FIND_PACKAGE(ODE)
-#FIND_PACKAGE(XercesC     REQUIRED)
-#FIND_PACKAGE(CEGUI       REQUIRED)
-#FIND_PACKAGE(RakNet      REQUIRED)
+# core libraries (todo)
+
+# optional libraries
 FIND_PACKAGE(OpenGL)
+FIND_PACKAGE(OSG)
+FIND_PACKAGE(OpenThreads)
+FIND_PACKAGE(Cal3d)
+FIND_PACKAGE(ODE)
 
 #FIND_PACKAGE(Delta3DLibs REQUIRED)
 

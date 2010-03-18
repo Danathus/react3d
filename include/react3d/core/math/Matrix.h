@@ -1,16 +1,16 @@
-#ifndef RAGDOLL_MATRIX__H
-#define RAGDOLL_MATRIX__H
+#ifndef REACT3D_MATRIX__H
+#define REACT3D_MATRIX__H
 
 ////////////////////////////////////////////////////////////////////////////////
 
-#include <react3d/LibraryExport.h>
+#include <react3d/core/LibraryExport.h>
 
 #include <react3d/core/math/Vec.h>
 
 ////////////////////////////////////////////////////////////////////////////////
 
 // row (M) x column (N)
-template <unsigned int M, unsigned int N, typename T> class RAGDOLL_LIBRARY_EXPORT Matrix
+template <unsigned int M, unsigned int N, typename T> class /*REACT3D_CORE_LIBRARY_EXPORT*/ Matrix
 {
 public:
 	Matrix() {}
@@ -247,7 +247,7 @@ template <unsigned int M, unsigned int N, typename T> inline Matrix<M, N, T> ope
 
 ////////////////////////////////////////////////////////////////////////////////
 
-template <unsigned int N, typename T> class RAGDOLL_LIBRARY_EXPORT SquareMatrix : public Matrix<N, N, T>
+template <unsigned int N, typename T> class /*REACT3D_CORE_LIBRARY_EXPORT*/ SquareMatrix : public Matrix<N, N, T>
 {
 public:
 	SquareMatrix() {}
@@ -338,7 +338,7 @@ template <typename T> T SquareMatrix<1, T>::operator!() const
 
 ////////////////////////////////////////////////////////////////////////////////
 
-template <typename T> class RAGDOLL_LIBRARY_EXPORT Matrix2x2 : public SquareMatrix<2, T>
+template <typename T> class /*REACT3D_CORE_LIBRARY_EXPORT*/ Matrix2x2 : public SquareMatrix<2, T>
 {
 public:
 	Matrix2x2() {}
@@ -346,7 +346,7 @@ public:
 
 ////////////////////////////////////////////////////////////////////////////////
 
-template <typename T> class RAGDOLL_LIBRARY_EXPORT Matrix3x3 : public SquareMatrix<3, T>
+template <typename T> class /*REACT3D_CORE_LIBRARY_EXPORT*/ Matrix3x3 : public SquareMatrix<3, T>
 {
 public:
 	Matrix3x3() {}
@@ -354,7 +354,7 @@ public:
 
 ////////////////////////////////////////////////////////////////////////////////
 
-template <typename T> class RAGDOLL_LIBRARY_EXPORT Matrix4x4 : public SquareMatrix<4, T>
+template <typename T> class /*REACT3D_CORE_LIBRARY_EXPORT*/ Matrix4x4 : public SquareMatrix<4, T>
 {
 public:
 	Matrix4x4() {}
@@ -433,4 +433,4 @@ typedef Matrix4x4<float> Matrix4x4f;
 
 ////////////////////////////////////////////////////////////////////////////////
 
-#endif // RAGDOLL_MATRIX__H
+#endif // REACT3D_MATRIX__H

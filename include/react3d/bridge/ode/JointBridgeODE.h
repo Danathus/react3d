@@ -1,15 +1,15 @@
-#ifndef RAGDOLL_BRIDGE_ODE_JOINT__H
-#define RAGDOLL_BRIDGE_ODE_JOINT__H
+#ifndef REACT3D_BRIDGE_ODE_JOINT__H
+#define REACT3D_BRIDGE_ODE_JOINT__H
 
 ////////////////////////////////////////////////////////////////////////////////
 
-#include <ragdoll/LibraryExport.h>
+#include <react3d/bridge/ode/LibraryExport.h>
 
 typedef struct dxJoint* dJointID;
 
 ////////////////////////////////////////////////////////////////////////////////
 
-class RAGDOLL_LIBRARY_EXPORT JointBridgeODE
+class REACT3D_BRIDGE_ODE_LIBRARY_EXPORT JointBridgeODE
 {
 public:
    JointBridgeODE();
@@ -25,4 +25,4 @@ private:
 
 ////////////////////////////////////////////////////////////////////////////////
 
-#endif // RAGDOLL_BRIDGE_ODE_JOINT__H
+#endif // REACT3D_BRIDGE_ODE_JOINT__H

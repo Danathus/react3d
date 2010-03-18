@@ -1,5 +1,5 @@
-#ifndef RAGDOLL_BRIDGE_ODE_MATH__H
-#define RAGDOLL_BRIDGE_ODE_MATH__H
+#ifndef REACT3D_BRIDGE_ODE_MATH__H
+#define REACT3D_BRIDGE_ODE_MATH__H
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -41,4 +41,4 @@ inline dQuaternion ConvertKerneltoODE(const Quaternionf& kernelQuat)
 
 ////////////////////////////////////////////////////////////////////////////////
 
-#endif // RAGDOLL_BRIDGE_ODE_MATH__H
+#endif // REACT3D_BRIDGE_ODE_MATH__H

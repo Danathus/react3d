@@ -1,4 +1,4 @@
-#include <ragdoll/bridge/ode/SkeletonBridgeODE.h>
+#include <react3d/bridge/ode/SkeletonBridgeODE.h>
 
 #include <ode/ode.h>
 

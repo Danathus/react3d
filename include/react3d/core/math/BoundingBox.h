@@ -1,5 +1,5 @@
-#ifndef RAGDOLL_BOUNDING_BOX__H
-#define RAGDOLL_BOUNDING_BOX__H
+#ifndef REACT3D_BOUNDING_BOX__H
+#define REACT3D_BOUNDING_BOX__H
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -30,4 +30,4 @@ private:
 
 ////////////////////////////////////////////////////////////////////////////////
 
-#endif // RAGDOLL_BOUNDING_BOX__H
+#endif // REACT3D_BOUNDING_BOX__H

@@ -1,5 +1,5 @@
-#ifndef RAGDOLL_BRIDGE_CAL3D_BONE__H
-#define RAGDOLL_BRIDGE_CAL3D_BONE__H
+#ifndef REACT3D_BRIDGE_CAL3D_BONE__H
+#define REACT3D_BRIDGE_CAL3D_BONE__H
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -7,8 +7,8 @@
 #include <vector>
 #include <list>
 
-#include <ragdoll/LibraryExport.h>
-#include <ragdoll/core/math/Matrix.h>
+#include <react3d/bridge/cal3d/LibraryExport.h>
+#include <react3d/core/math/Matrix.h>
 
 class CalBone;
 class CalModel;
@@ -19,7 +19,7 @@ class Bone;
 
 ////////////////////////////////////////////////////////////////////////////////
 
-class RAGDOLL_LIBRARY_EXPORT BoneBridgeCAL3D
+class REACT3D_BRIDGE_CAL3D_LIBRARY_EXPORT BoneBridgeCAL3D
 {
 public:
    BoneBridgeCAL3D(Skeleton& skeleton, CalBone* calBone, CalModel* calModel, int calBoneID);
@@ -79,4 +79,4 @@ private:
 
 ////////////////////////////////////////////////////////////////////////////////
 
-#endif //RAGDOLL_BRIDGE_CAL3D_BONE__H
+#endif // REACT3D_BRIDGE_CAL3D_BONE__H

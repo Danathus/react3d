@@ -1,5 +1,5 @@
-#ifndef RAGDOLL_BRIDGE_OSG_MATH__H
-#define RAGDOLL_BRIDGE_OSG_MATH__H
+#ifndef REACT3D_BRIDGE_OSG_MATH__H
+#define REACT3D_BRIDGE_OSG_MATH__H
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -121,4 +121,4 @@ inline osg::Quat ConvertKerneltoOSG(const Quaternionf& kernelQuat)
 
 ////////////////////////////////////////////////////////////////////////////////
 
-#endif // RAGDOLL_BRIDGE_OSG_MATH__H
+#endif // REACT3D_BRIDGE_OSG_MATH__H

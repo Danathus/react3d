@@ -1,12 +1,12 @@
-#ifndef RAGDOLL_BRIDGE_OSG_BONE__H
-#define RAGDOLL_BRIDGE_OSG_BONE__H
+#ifndef REACT3D_BRIDGE_OSG_BONE__H
+#define REACT3D_BRIDGE_OSG_BONE__H
 
 ////////////////////////////////////////////////////////////////////////////////
 
 #include <osg/ref_ptr>
 
 #include <react3d/core/math/Vec.h>
-#include <react3d/LibraryExport.h>
+#include <react3d/bridge/osg/LibraryExport.h>
 
 // todo -- try to get rid of these includes...
 #include <osg/ShapeDrawable>
@@ -24,7 +24,7 @@ class Bone;
 
 ////////////////////////////////////////////////////////////////////////////////
 
-class RAGDOLL_LIBRARY_EXPORT BoneBridgeOSG
+class REACT3D_BRIDGE_OSG_LIBRARY_EXPORT BoneBridgeOSG
 {
 public:
    BoneBridgeOSG();
@@ -49,4 +49,4 @@ private:
 
 ////////////////////////////////////////////////////////////////////////////////
 
-#endif //RAGDOLL_BRIDGE_OSG_BONE__H
+#endif // REACT3D_BRIDGE_OSG_BONE__H

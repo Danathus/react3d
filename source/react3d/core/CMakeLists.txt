@@ -3,6 +3,7 @@ set(LIB_NAME react3d_core)
 file(GLOB REACT3D_CORE_SOURCE_FILES
      ${SOURCE_PATH}/react3d/core/*.cpp
      ${SOURCE_PATH}/react3d/core/kernel/*.cpp
+     ${SOURCE_PATH}/react3d/core/math/*.cpp
 )
 
 file(GLOB REACT3D_CORE_HEADER_FILES
@@ -12,7 +13,7 @@ file(GLOB REACT3D_CORE_HEADER_FILES
 )
 
 # source files for static lib
-add_library(${LIB_NAME} #SHARED
+add_library(${LIB_NAME} ${LIBMODE}
             ${REACT3D_CORE_SOURCE_FILES}
             ${REACT3D_CORE_HEADER_FILES}
 )
@@ -20,14 +21,18 @@ add_library(${LIB_NAME} #SHARED
 INCLUDE_DIRECTORIES(${HEADER_PATH}
 )
 
-# little hack to get the .dll into /bin and .lib into /lib
-IF (MSVC)
-  SET_TARGET_PROPERTIES(${LIB_NAME} PROPERTIES PREFIX "../../bin/")
-  SET_TARGET_PROPERTIES(${LIB_NAME} PROPERTIES IMPORT_PREFIX "../")
-ENDIF (MSVC)
-
 # libraries to link into the executable, both Release and Debug
 TARGET_LINK_LIBRARIES(${LIB_NAME}
 )
 
-SET_TARGET_PROPERTIES(${LIB_NAME} PROPERTIES DEFINE_SYMBOL REACT3D_CORE_EXPORTS)
+if (USE_DYNAMIC_LINK)
+  SET_TARGET_PROPERTIES(${LIB_NAME} PROPERTIES DEFINE_SYMBOL REACT3D_CORE_EXPORTS)
+else (USE_DYNAMIC_LINK)
+  SET_TARGET_PROPERTIES(${LIB_NAME} PROPERTIES DEFINE_SYMBOL USE_STATIC_LINKING)
+endif (USE_DYNAMIC_LINK)
+
+# little hack to get the .dll into /bin and .lib into /lib
+if (MSVC)
+  SET_TARGET_PROPERTIES(${LIB_NAME} PROPERTIES PREFIX "../../bin/")
+  SET_TARGET_PROPERTIES(${LIB_NAME} PROPERTIES IMPORT_PREFIX "../")
+endif (MSVC)
